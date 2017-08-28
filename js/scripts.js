@@ -1,11 +1,18 @@
-var url = 'https://restcountries.eu/rest/v1/name/',
-    countriesList = $('#countries');
+var url = 'https://restcountries.eu/rest/v2/name/',
+    countriesList = $('#countries'),
+    capitalsList = $('#capitals'),
+    languagesList = $('#languages'),
+    flagsList = $('#flags');
 
-$('#search').click(searchCountries);
+$('#search')
+    .click(searchCountries);
 
 function searchCountries() {
-    var countryName = $('#country-name').val();
-    if(!countryName.length) countryName = 'Poland';
+    var countryName = $('#country-name')
+        .val();
+    if (!countryName.length) {
+        countryName = 'Poland';
+    }
     $.ajax({
         url: url + countryName,
         method: 'GET',
@@ -14,9 +21,43 @@ function searchCountries() {
 }
 
 function showCountriesList(resp) {
-    countriesList.empty();
-    resp.forEach(function(item){
-        $('<li>').text(item.name).appendTo(countriesList);
+    var allLanguages = '';
+    emptyItems();
+
+    resp.forEach(function(item) {
+        $('<li>')
+            .text(`Country: ${item.name}`)
+            .appendTo(countriesList);
+        $('<li>')
+            .text(`Capital: ${item.capital}`)
+            .appendTo(capitalsList);
+
+        allLanguages = getLanguages(item);
+        $('<li>')
+            .text(`Languages: ${allLanguages}`)
+            .appendTo(languagesList);
+        $(`<img src="${item.flag}" alt="flag">`)
+            .appendTo(flagsList);
+        $()
+
     });
 }
 
+function emptyItems() {
+    countriesList.empty();
+    capitalsList.empty();
+    languagesList.empty();
+    flagsList.empty();
+}
+
+function getLanguages(item) {
+    var languages = '',
+        langLength = item.languages.length,
+        i = 0;
+
+    for (i = 0; i < langLength; i++) {
+        languages += item.languages[i].name;
+        languages += ", ";
+    }
+    return languages;
+}
