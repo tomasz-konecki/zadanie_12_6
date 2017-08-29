@@ -58,7 +58,12 @@ function createInfoBox(country, capital, area, population, languages, currency, 
         });
 
         flagBox.append(flagImage);
+
+        if (country.length > 20) {
+            countryName.addClass('small-font');
+        }
         countryName.text(country);
+
         infoHead.append(flagBox)
             .append(countryName);
 
