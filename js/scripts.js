@@ -32,11 +32,6 @@ function showCountriesList(resp) {
     });
 }
 
-function emptyItems() {
-    var a = $('.info-box');
-        a.addClass('hidden');
-}
-
 function createInfoBox(country, capital, area, population, languages, currency, flag) {
     var container = $('#container'),
         infoBox = $('<div>').addClass('info-box'),
@@ -90,4 +85,8 @@ function getLanguages(item) {
     }
 
     return languages.join(", ");
+}
+
+function emptyItems() {
+    $('.info-box').addClass('hidden');
 }
