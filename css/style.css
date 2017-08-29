@@ -1,9 +1,13 @@
 * {
     box-sizing: border-box;
 }
+body {
+    background-color: #f2f2de;
+}
 .flag {
     width: 100px;
-    height: 35px;
+    height: 70px;
+    overflow: hidden;
 }
 img {
     width: 100%;
