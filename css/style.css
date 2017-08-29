@@ -1,22 +1,60 @@
-h3 {
-    padding-left: 20px;
+* {
+    box-sizing: border-box;
 }
-.display-box {
-    margin-top: 30px;
-    display: flex;
-}
-.countries-box, .capitals-box, .languages-box {
-    flex-basis: 350px;
-}
-.flags {
-    display: flex;
-    flex-direction: column;
-}
-
-img {
+.flag {
     width: 70px;
+    height: 35px;
+}
+img {
+    width: 100%;
     box-shadow: 2px 2px 1px gray;
 }
-.display-box div {
-    border: 1px solid teal;
+.info-box {
+    width: 600px;
+    height: 210px;
+    margin-top: 20px;
+}
+.info-head {
+    height: 70px;
+    display: flex;
+}
+.country-name {
+    font-size: 40px;
+    color: #0001FB;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+.info-bar, .bottom-bar {
+    background-color: #010081;
+    color: white;
+    height: 20px;
+}
+p {
+    margin: 0;
+}
+.details-box {
+    display: flex;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+    height: 20px;
+    border-bottom: 1px solid #fff;
+    padding-right: 15px;
+}
+.details-list-1 {
+    background-color: #FFCB00;
+    flex-basis: 25%;
+}
+.details-list-2 {
+    background-color: #FEFE98;
+    flex-basis: 75%;
+}
+.hidden {
+    display: none;
 }
