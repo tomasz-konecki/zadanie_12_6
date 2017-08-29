@@ -1,15 +1,4 @@
-
-/*
-$(() => {
-    createInfoBox();
-});
-*/
-
-var url = 'https://restcountries.eu/rest/v2/name/',
-    countryBox = $('#country'),
-    capitalsList = $('#capitals'),
-    languagesList = $('#languages'),
-    flagBox = $('#flag');
+var url = 'https://restcountries.eu/rest/v2/name/';
 
 $('#search')
     .click(searchCountries);
@@ -97,8 +86,8 @@ function getLanguages(item) {
         i = 0;
 
     for (i = 0; i < langLength; i++) {
-        languages = item.languages[i].name;
-        languages += ", ";
+        languages.push(item.languages[i].name);
     }
-    return languages;
+
+    return languages.join(", ");
 }
