@@ -1,6 +1,5 @@
 var url = 'https://restcountries.eu/rest/v2/name/';
 
-
 $('#search')
     .click(searchCountries);
 
@@ -48,16 +47,15 @@ function createInfoBox(country, capital, area, population, languages, currency, 
         detailsArray2 = [capital, area, population, languages, currency],
         bottomBar = $('<p>').addClass('bottom-bar');
 
-        detailsArray1.forEach(function(item) {
+        detailsArray1.forEach((item) => {
             var detailItem1 = $('<li>').text(item);
                 detailItem1.appendTo(detailsList1);
         });
 
-        detailsArray2.forEach(function(item) {
+        detailsArray2.forEach((item) => {
             var detailItem2 = $('<li>').text(` : ${item}`);
                 detailItem2.appendTo(detailsList2);
         });
-
 
         flagBox.append(flagImage);
         countryName.text(country);

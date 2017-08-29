@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 .flag {
-    width: 70px;
+    width: 100px;
     height: 35px;
 }
 img {
@@ -15,7 +15,7 @@ img {
     margin-top: 20px;
 }
 .info-head {
-    height: 70px;
+    height: 75px;
     display: flex;
 }
 .country-name {
