@@ -1,5 +1,6 @@
 var url = 'https://restcountries.eu/rest/v2/name/';
 
+
 $('#search')
     .click(searchCountries);
 
@@ -72,7 +73,6 @@ function createInfoBox(country, capital, area, population, languages, currency, 
             .append(bottomBar);
 
         infoBox.appendTo(container);
-
 }
 
 function getLanguages(item) {
