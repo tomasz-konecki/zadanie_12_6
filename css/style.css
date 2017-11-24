@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Madurai');
+
 * {
     box-sizing: border-box;
 }
 body {
     background-color: #f2f2de;
+    font-family: 'Hind Madurai', sans-serif;
+}
+h2 {
+    color: #636060;
+}
+input {
+    width: 167px;
 }
 .info-box {
     max-width: 600px;
@@ -24,8 +33,7 @@ img {
 }
 .country-name {
     flex-basis: 83%;
-    flex-basis: ;
-    font-size: 40px;
+    font-size: 30px;
     color: #0001FB;
     font-weight: bold;
     margin: 15px 0;
