@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Madurai');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #f2f2de;
+    font-family: 'Hind Madurai', sans-serif;
+}
+h2 {
+    color: #636060;
+}
+input {
+    width: 167px;
+}
+.info-box {
+    max-width: 600px;
+    height: 210px;
+    margin-top: 30px;
+}
+.info-head {
+    height: 75px;
+    display: flex;
+}
+.flag {
+    flex-basis: 17%;
+    height: 70px;
+    overflow: hidden;
+}
+img {
+    width: 80%;
+    box-shadow: 2px 2px 1px gray;
+}
+.country-name {
+    flex-basis: 83%;
+    font-size: 30px;
+    color: #0001FB;
+    font-weight: bold;
+    margin: 15px 0;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+.info-bar, .bottom-bar {
+    background-color: #010081;
+    color: white;
+    height: 24px;
+}
+p {
+    margin: 0;
+    line-height: 24px;
+}
+.details-box {
+    display: flex;
+}
+.details-list-1 {
+    background-color: #FFCB00;
+    flex-basis: 25%;
+}
+.details-list-2 {
+    background-color: #FEFE98;
+    flex-basis: 75%;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+    height: 20px;
+    border-bottom: 1px solid #fff;
+    padding-right: 15px;
+}
+.hidden {
+    display: none;
+}
+.small-font {
+    font-size: 20px;
+    margin-top: 0;
+}
